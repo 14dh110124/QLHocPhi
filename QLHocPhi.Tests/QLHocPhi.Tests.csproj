@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C594FF12-31FD-4277-B740-064E8FA83F40}</ProjectGuid>
+    <ProjectGuid>{961F9B96-3319-45F8-BEAD-0F2AC9C4B6AA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QLHocPhi.Tests</RootNamespace>
@@ -93,7 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QLHocPhi\QLHocPhi.csproj">
-      <Project>{F2C260B5-80FA-45A8-92D7-B8FF1D48B452}</Project>
+      <Project>{01B82539-84ED-4115-B30C-5EBCA414673F}</Project>
       <Name>QLHocPhi</Name>
     </ProjectReference>
   </ItemGroup>
