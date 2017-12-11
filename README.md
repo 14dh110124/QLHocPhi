@@ -1,6 +1,1 @@
 # QLHocPhi
-
-aaaaaaaa
-
-
-trigger
