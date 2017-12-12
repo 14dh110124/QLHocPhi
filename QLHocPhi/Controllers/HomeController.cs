@@ -12,5 +12,9 @@ namespace QLHocPhi.Controllers
         {
             return View();
         }
+        public ActionResult Details()
+        {
+            return View();
+        }
     }
 }
