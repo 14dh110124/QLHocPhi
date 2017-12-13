@@ -1,67 +1,66 @@
-﻿@model QLHocPhi.Models.HocVien
+﻿@model QLHocPhi.Model.HocVien
 
 @{
     ViewBag.Title = "Details";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
+<div style="padding-top:100px;padding-bottom:230px;">
+    <h2 style="text-align:center"><b>Chi tiết học viên @Model.HoTen</b></h2>
 
-<h2>Details</h2>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.PhiHocVien.MaPhi)
+            </dt>
 
-<div>
-    <h4>HocVien</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.PhiHocVien1.MaPhi)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PhiHocVien.MaPhi)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.HoTen)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.PhiHocVien1.MaPhi)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.HoTen)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.HoTen)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.DiaChi)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.HoTen)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.DiaChi)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.DiaChi)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.SDT)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.DiaChi)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.SDT)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.SDT)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.SDT)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Delfag)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Delfag)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Delfag)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Delfag)
-        </dd>
-
-    </dl>
+        </dl>
+    </div>
+    <div style="padding-left:50px;">
+        @Html.ActionLink("Sửa", "Edit", new { id = Model.MaHocVien }) |
+        @Html.ActionLink("Trở về", "Index")
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MaHocVien }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

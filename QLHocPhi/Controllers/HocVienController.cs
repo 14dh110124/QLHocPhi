@@ -6,10 +6,10 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using QLHocPhi.Models;
+using QLHocPhi.Model;
 
 namespace QLHocPhi.Controllers
-{
+{   
     public class HocVienController : Controller
     {
         private QLHP db = new QLHP();
@@ -17,7 +17,7 @@ namespace QLHocPhi.Controllers
         // GET: HocVien
         public ActionResult Index()
         {
-            var hocViens = db.HocViens.Include(h => h.PhiHocVien1);
+            var hocViens = db.HocViens.Include(h => h.PhiHocVien);
             return View(hocViens.ToList());
         }
 
@@ -39,7 +39,7 @@ namespace QLHocPhi.Controllers
         // GET: HocVien/Create
         public ActionResult Create()
         {
-            ViewBag.PhiHocVien = new SelectList(db.PhiHocViens, "MaPhi", "MaPhi");
+            ViewBag.MaPhi = new SelectList(db.PhiHocViens, "MaPhi", "MaPhi");
             return View();
         }
 
@@ -48,7 +48,7 @@ namespace QLHocPhi.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MaHocVien,HoTen,DiaChi,SDT,Email,PhiHocVien,Delfag")] HocVien hocVien)
+        public ActionResult Create([Bind(Include = "MaHocVien,HoTen,DiaChi,SDT,Email,MaPhi,Delfag")] HocVien hocVien)
         {
             if (ModelState.IsValid)
             {
@@ -57,7 +57,7 @@ namespace QLHocPhi.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.PhiHocVien = new SelectList(db.PhiHocViens, "MaPhi", "MaPhi", hocVien.PhiHocVien);
+            ViewBag.MaPhi = new SelectList(db.PhiHocViens, "MaPhi", "MaPhi", hocVien.MaPhi);
             return View(hocVien);
         }
 
@@ -73,7 +73,7 @@ namespace QLHocPhi.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.PhiHocVien = new SelectList(db.PhiHocViens, "MaPhi", "MaPhi", hocVien.PhiHocVien);
+            ViewBag.MaPhi = new SelectList(db.PhiHocViens, "MaPhi", "MaPhi", hocVien.MaPhi);
             return View(hocVien);
         }
 
@@ -82,7 +82,7 @@ namespace QLHocPhi.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MaHocVien,HoTen,DiaChi,SDT,Email,PhiHocVien,Delfag")] HocVien hocVien)
+        public ActionResult Edit([Bind(Include = "MaHocVien,HoTen,DiaChi,SDT,Email,MaPhi,Delfag")] HocVien hocVien)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +90,7 @@ namespace QLHocPhi.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.PhiHocVien = new SelectList(db.PhiHocViens, "MaPhi", "MaPhi", hocVien.PhiHocVien);
+            ViewBag.MaPhi = new SelectList(db.PhiHocViens, "MaPhi", "MaPhi", hocVien.MaPhi);
             return View(hocVien);
         }
 

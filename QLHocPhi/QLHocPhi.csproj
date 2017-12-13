@@ -145,18 +145,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\DangKy.cs" />
-    <Compile Include="Models\DiemThi.cs" />
-    <Compile Include="Models\GiangVien.cs" />
-    <Compile Include="Models\HoaDon.cs" />
-    <Compile Include="Models\HocPhi.cs" />
-    <Compile Include="Models\HocVien.cs" />
-    <Compile Include="Models\Lop.cs" />
-    <Compile Include="Models\NhanVien.cs" />
-    <Compile Include="Models\PhiHocVien.cs" />
-    <Compile Include="Models\QLHP.cs" />
-    <Compile Include="Models\QuyenNV.cs" />
-    <Compile Include="Models\ThoiKhoaBieu.cs" />
+    <Compile Include="Model\DangKy.cs" />
+    <Compile Include="Model\DiemThi.cs" />
+    <Compile Include="Model\GiangVien.cs" />
+    <Compile Include="Model\HoaDon.cs" />
+    <Compile Include="Model\HocPhi.cs" />
+    <Compile Include="Model\HocVien.cs" />
+    <Compile Include="Model\Lop.cs" />
+    <Compile Include="Model\NhanVien.cs" />
+    <Compile Include="Model\PhiHocVien.cs" />
+    <Compile Include="Model\QLHP.cs" />
+    <Compile Include="Model\QuyenNV.cs" />
+    <Compile Include="Model\ThoiKhoaBieu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -165,6 +165,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\dataTables.bootstrap4.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\main.css" />
@@ -298,11 +299,18 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.isotope.min.js" />
     <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\layout2\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\layout2\dataTables.bootstrap4.js" />
+    <Content Include="Scripts\layout2\jquery.dataTables.js" />
+    <Content Include="Scripts\layout2\jquery.easing.min.js" />
+    <Content Include="Scripts\layout2\jquery.min.js" />
     <Content Include="Scripts\jquery.prettyPhoto.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\layout2\sb-admin-datatables.min.js" />
+    <Content Include="Scripts\layout2\sb-admin.min.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
@@ -327,12 +335,13 @@
     <Content Include="Views\Shared\_Slider.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Shared\_Top-bar.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Shared\_Layout2.cshtml" />
     <Content Include="Views\HocVien\Create.cshtml" />
     <Content Include="Views\HocVien\Delete.cshtml" />
     <Content Include="Views\HocVien\Details.cshtml" />
     <Content Include="Views\HocVien\Edit.cshtml" />
     <Content Include="Views\HocVien\Index.cshtml" />
-    <Content Include="Views\Home\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
